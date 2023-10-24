@@ -41,3 +41,13 @@ function getComputerChoice(){
     } 
 }
 
+function game(){
+    
+    let playerChoice = prompt("Let's play a game of Rock Paper Scissors! Make a choice")
+    console.log("The player has chosen " + playerChoice.toLowerCase())
+    let computerChoice = getComputerChoice()
+    console.log("The computer has chosen " + computerChoice.toLowerCase())
+    return(playRound(playerChoice.toLowerCase(), computerChoice.toLowerCase()))
+
+}
+
