@@ -51,3 +51,28 @@ function game(){
 
 }
 
+let playerWins = 0
+let computerWins = 0
+
+for( let games=1; games<6; games++){
+    console.log("Currrently playing game #" + games)
+    let outcome = game()
+    if (outcome == "Player Wins"){
+        playerWins = playerWins+1
+    }
+    else if (outcome == "Computer Wins"){
+        computerWins = computerWins+1
+    }
+    console.log("The Player has won " + playerWins + " times")
+    console.log("The Computer has won " + computerWins + " times")
+}
+
+if (playerWins == computerWins){
+    console.log("Its a draw. Player and Computer both won " + playerWins + " times")
+}
+else if(playerWins>computerWins){
+    console.log("Player is the winner. Player won " + playerWins + " times. While Computer won " + computerWins + " times")
+}
+else if(playerWins<computerWins){
+    console.log("Computer is the winner. Computer won " + computerWins + " times. While Player won " + playerWins + " times")
+}
